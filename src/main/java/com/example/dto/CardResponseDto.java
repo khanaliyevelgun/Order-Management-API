@@ -9,9 +9,8 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class OrderResponseDto {
+public class CardResponseDto {
+    private Long id;
     private String cardNumber;
-    private String productName;
-    private Double amount;
-    private Double cardBalance;
+    private Double balance;
 }

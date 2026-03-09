@@ -22,7 +22,4 @@ public class CardEntity {
     private String cardNumber;
     @Column(name = "balance")
     private Double balance;
-
-
-
 }

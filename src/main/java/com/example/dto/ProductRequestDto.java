@@ -13,14 +13,15 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class OrderRequestDto {
+public class ProductRequestDto {
+    @NotBlank
+    private String name;
     @NotNull
     @Positive
-    private Long productId;
+    private Double price;
     @NotNull
-    @Positive
-    private Long cardId;
-    @NotNull
-    @Positive
-    private Integer productCount;
+    @PositiveOrZero
+    private Integer stock;
+
+
 }

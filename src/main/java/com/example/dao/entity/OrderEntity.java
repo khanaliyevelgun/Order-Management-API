@@ -20,14 +20,16 @@ public class OrderEntity {
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "product_id")
-    private Long productId;
-    @Column(name = "card_id")
-    private Long cardId;
+    @JoinColumn(name = "product_id")
+    @ManyToOne
+    private ProductEntity product;
+    @JoinColumn(name = "card_id")
+    @ManyToOne
+    private CardEntity card;
     @Column(name = "quantity")
     private Integer quantity;
     @Column(name = "total_amount")
-    private Double totalAMount;
+    private Double totalAmount;
     @Column(name = "order_date")
     private LocalDateTime orderDate;
 
